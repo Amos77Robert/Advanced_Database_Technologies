@@ -1,4 +1,4 @@
-# Advanced Database Technologies - Intelligence Databases Assignments
+# Intelligence Databases - Debugging SQL codes
 
 ## Project Overview
 This repository contains solutions for **Advanced Database Technologies** assignments covering intelligent database concepts including declarative constraints, active databases, deductive databases, knowledge bases, and spatial databases. All implementations are built using **Oracle 21c Enterprise Edition**.
@@ -84,5 +84,5 @@ This repository contains solutions for **Advanced Database Technologies** assign
 
 ---
 
-## Academic Disclaimer
--All data used in this database design and implementation is dummy data created solely to facilitate validation of the technical implementations. This includes names, contact numbers, locations, and email addresses - none represent real individuals or actual hospital records.
+## Academic Disclaimer  
+- All data used in this database design and implementation is dummy data created solely to facilitate validation of the technical implementations. This includes names, contact numbers, locations, and email addresses - none represent real individuals or actual hospital records.
