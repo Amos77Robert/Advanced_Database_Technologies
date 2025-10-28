@@ -1,4 +1,4 @@
-# Smart Hospital Patient Flow & Prescription System
+# Smart Hospital Patient Flow & Prescription System (CAT1)
 
 ## Project Overview
 The **Smart Hospital System** is designed to streamline hospital workflows - from patient registration and appointment booking to diagnosis and medication issuance. The system ensures smooth coordination between departments, doctors, patients, appointments, prescriptions, and medications while maintaining data consistency.  
