@@ -23,22 +23,22 @@ This lab assessment measures students' ability to:
 - `c##bugesera_branch` - Neurology department data
 - `c##kigali_branch` - All other departments data
 
-**Files:** `those starting with Qtn_1`
+**SQL Files:** `those starting with Qtn_1`
 
 ### Task 2: Database Links Creation and Usage
 **Implementation:** Created `KIGALI_BRANCH_LINK` database link with successful remote SELECT operations and distributed joins.
 
-**Files:** `those starting with Qtn_2`
+**SQL Files:** `those starting with Qtn_2`
 
 ### Task 3: Parallel Query Execution
 **Implementation:** Enabled parallel query execution on large tables with performance comparison between serial and parallel execution using `/*+ PARALLEL */` hints.
 
-**Files:** `those starting with Qtn_3`
+**SQL Files:** `those starting with Qtn_3`
 
 ### Task 4: Two-Phase Commit Simulation
 **Implementation:** PL/SQL block performing atomic inserts across both nodes with verification using `DBA_2PC_PENDING` data dictionary view.
 
-**Files:** `those starting with Qtn_4`
+**SQL Files:** `those starting with Qtn_4`
 
 ### Task 5: Distributed Rollback and Recovery
 **Implementation:** Simulated network failure during distributed transactions and demonstrated recovery using `ROLLBACK FORCE` command.
