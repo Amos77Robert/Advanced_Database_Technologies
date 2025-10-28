@@ -73,6 +73,4 @@ This lab assessment measures students' ability to:
 ---
 
 ## Academic Disclaimer
-- 
-## Academic Disclaimer
 -All data used in this database design and implementation is dummy data created solely to facilitate validation of the technical implementations. This includes names, contact numbers, locations, and email addresses - none represent real individuals or actual hospital records.
