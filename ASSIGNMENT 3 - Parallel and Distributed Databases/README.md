@@ -1,80 +1,78 @@
-# Smart Hospital Patient Flow & Prescription System
+# Parallel and Distributed Databases - Lab Assignment
+---
 
-## Project Overview
-The **Smart Hospital System** is designed to streamline hospital workflows - from patient registration and appointment booking to diagnosis and medication issuance. The system ensures smooth coordination between departments, doctors, patients, appointments, prescriptions, and medications while maintaining data consistency.  
+## 📁 Assignment Overview
 
-This project implements a **relational database in Oracle 21c Enterprise Edition** with triggers, views, and constraints to manage hospital operations efficiently.
+This folder contains assignment 3. It is a complete implementation and documentation for the **Parallel and Distributed Databases Lab Assignment**. The project demonstrates practical implementation of distributed database concepts using Oracle Database, focusing on fragmentation, distributed transactions, parallel processing, and concurrency control.
 
 ---
 
-## Case Study Description
-Every doctor belongs to a department, and each appointment links a patient, a doctor, and a diagnosis report. Prescriptions are issued per appointment, referencing drugs stocked in the pharmacy. The system ensures:
+## 🎯 Assignment Objectives
 
-- Accurate medical records  
-- Patient follow-ups  
-- Proper tracking of stock dispensing  
-
----
-
-## Database Tables
-The system includes six main tables:
-
-| Table | Columns |
-|-------|---------|
-| **Department** | DeptID (PK), DeptName, Location |
-| **Doctor** | DoctorID (PK), FullName, Specialty, DeptID (FK), Phone, Email |
-| **Patient** | PatientID (PK), FullName, Gender, DOB, Contact, Address |
-| **Appointment** | AppointmentID (PK), PatientID (FK), DoctorID (FK), VisitDate, Diagnosis, Status |
-| **Prescription** | PrescriptionID (PK), AppointmentID (FK), Notes, DateIssued |
-| **Medication** | MedID (PK), PrescriptionID (FK), DrugName, Dosage, Duration, Quantity |
+This lab assessment measures students' ability to:
+- Design and implement a parallel and distributed database system using Oracle
+- Execute real-world scenarios based on existing project schemas
+- Analyze performance, concurrency, and recovery in distributed environments
 
 ---
 
-## Relationships
-- Department → Doctor (1:N)  
-- Doctor → Appointment (1:N)  
-- Patient → Appointment (1:N)  
-- Appointment → Prescription (1:1)  
-- Prescription → Medication (1:N)  
+## 📋 Practical Tasks Implementation
 
-> **Cascade Delete** is defined between Appointment → Prescription and Prescription → Medication to ensure referential integrity.
+### Task 1: Distributed Schema Design and Fragmentation
+**Implementation:** Horizontal fragmentation of hospital database into two logical nodes:
+- `c##bugesera_branch` - Neurology department data
+- `c##kigali_branch` - All other departments data
+
+**Files:** `task1-fragmentation.sql`
+
+### Task 2: Database Links Creation and Usage
+**Implementation:** Created `KIGALI_BRANCH_LINK` database link with successful remote SELECT operations and distributed joins.
+
+**Files:** `task2-database-links.sql`
+
+### Task 3: Parallel Query Execution
+**Implementation:** Enabled parallel query execution on large tables with performance comparison between serial and parallel execution using `/*+ PARALLEL */` hints.
+
+**Files:** `task3-parallel-queries.sql`
+
+### Task 4: Two-Phase Commit Simulation
+**Implementation:** PL/SQL block performing atomic inserts across both nodes with verification using `DBA_2PC_PENDING` data dictionary view.
+
+**Files:** `task4-two-phase-commit.sql`
+
+### Task 5: Distributed Rollback and Recovery
+**Implementation:** Simulated network failure during distributed transactions and demonstrated recovery using `ROLLBACK FORCE` command.
+
+**Files:** `task5-rollback-recovery.sql`
+
+### Task 6: Distributed Concurrency Control
+**Implementation:** Demonstrated lock conflicts between sessions from different nodes with analysis using `DBA_LOCKS` and interpretation of locking behavior.
+
+**Files:** `task6-concurrency-control.sql`
+
+### Task 7: Parallel Data Loading / ETL Simulation
+**Implementation:** Parallel data aggregation and loading using PARALLEL DML with runtime comparison and performance improvement documentation.
+
+**Files:** `task7-parallel-loading.sql`
+
+### Task 8: Three-Tier Client-Server Architecture Design
+**Implementation:** Designed and documented three-tier architecture showing data flow between Presentation, Application, and Database layers with database link interactions.
+
+**Files:** `task8-architecture-design.sql`, `architecture-diagram.png`
+
+### Task 9: Distributed Query Optimization
+**Implementation:** Used `EXPLAIN PLAN` and `DBMS_XPLAN.DISPLAY` to analyze distributed joins, discussing optimizer strategies and data movement minimization.
+
+**Files:** `task9-query-optimization.sql`
+
+### Task 10: Performance Benchmark and Report
+**Implementation:** Complex query executed in centralized, parallel, and distributed modes with performance measurement using `AUTOTRACE` and scalability analysis.
+
+**Files:** `task10-performance-benchmark.sql`
 
 ---
 
-## Key Features & Tasks Implemented
-1. **Table creation** with proper primary keys, foreign keys, NOT NULL, and CHECK constraints.  
-2. **Sample data insertion** for:  
-   - 3 departments  
-   - 5 doctors  
-   - 10 patients  
-3. **Queries** to:  
-   - Retrieve all appointments showing doctor name, patient name, and diagnosis  
-   - Identify the number of medications issued per department  
-4. **Triggers**:  
-   - Update prescription notes after an appointment is marked “Completed”  
-   - Record a log whenever a new prescription is created  
-5. **Views**:  
-   - Summarize total visits per doctor per month  
-6. **Consistency checks** for prescriptions, medications, and appointments.  
-
----
-
-## Sample Queries
-- **Retrieve appointments with doctor and patient names, and patient diagnosis**
-```sql
-SELECT appointment.AppointmentID, patient.FullName AS PatientName, doctor.FullName AS DoctorName, appointment.Diagnosis
-FROM Appointment
-JOIN Patient ON appointment.PatientID = patient.PatientID
-JOIN Doctor ON appointment.DoctorID = doctor.DoctorID;
-
-```  
-## Usage  
-- **How to clone the project**  
-```sql  
-git clone https://github.com/Amos77Robert/Advanced_Database_Technologies.git
-
-```
-## Disclaimer  
-```sql
-All the data used in the this database design and implementation is Dummy Data used to faciliate validation of the implementation hence it is not real nor was collected from any hospital  
-These data include names, numbers, locations and emails
+## Academic Disclaimer
+- 
+## Academic Disclaimer
+-All data used in this database design and implementation is dummy data created solely to facilitate validation of the technical implementations. This includes names, contact numbers, locations, and email addresses - none represent real individuals or actual hospital records.
