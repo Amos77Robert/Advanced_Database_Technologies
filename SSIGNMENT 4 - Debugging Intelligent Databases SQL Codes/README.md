@@ -1,7 +1,8 @@
 # Intelligence Databases - Debugging SQL codes
 
 ## Project Overview
-This folder contains solutions for Intelligent Databases topic whose assignment concepts including debugging the declarative constraints, active databases, deductive databases, knowledge bases, and spatial databases. All implementations are built using **Oracle 21c Enterprise Edition**.
+This folder contains solutions for Intelligent Databases topic whose assignment concepts including debugging the declarative constraints, active databases, deductive databases, knowledge bases, and spatial databases. All implementations are built using **Oracle 21c Enterprise Edition**.  
+The folder consists of PDF file for the report and SQL files bearing the name of each question of the assignment  
 
 ---
 
