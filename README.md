@@ -71,7 +71,7 @@ JOIN Doctor ON appointment.DoctorID = doctor.DoctorID;
 ## Usage  
 - **How to clone the project**  
 ```sql  
-git clone https://github.com/Amos77Robert/Advanced_Databases_Technology.git
+git clone https://github.com/Amos77Robert/Advanced_Database_Technologies.git
 
 ```
 ## Disclaimer  
