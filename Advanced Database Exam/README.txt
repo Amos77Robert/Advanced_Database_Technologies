@@ -5,8 +5,7 @@ My Approach to the Smart Hospital Patient Flow & Prescription Database Case Stud
 
 ****************************Exam Solution Overview ***************************************************************
 
-This document walks through a comprehensive implementation of parallel and distributed database 
-concepts using Oracle 21c database. The case study focuses on a hospital management system requiring 
+This document walks through a comprehensive implementation of parallel and distributed database, and also intelligent databases concepts using Oracle 21c database. The case study focuses on a hospital management system requiring 
 distributed data management across two branches while maintaining data integrity, performance, and business 
 rule enforcement.
 
