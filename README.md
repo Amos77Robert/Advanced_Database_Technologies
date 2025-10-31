@@ -1,6 +1,6 @@
 # Smart Hospital Patient Flow & Prescription System (CAT1)
 
-## Project Overview
+## Case Study - Project Overview
 The **Smart Hospital System** is designed to streamline hospital workflows - from patient registration and appointment booking to diagnosis and medication issuance. The system ensures smooth coordination between departments, doctors, patients, appointments, prescriptions, and medications while maintaining data consistency.  
 
 This project implements a **relational database in Oracle 21c Enterprise Edition** with triggers, views, and constraints to manage hospital operations efficiently.
